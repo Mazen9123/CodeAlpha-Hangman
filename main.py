@@ -30,7 +30,6 @@ def play():
     # Code
     print(logo)
     word_display()
-
     playing = True
     while playing:
         guess = input("Guess a letter: ").lower()
@@ -54,7 +53,10 @@ def play():
                     print('\n'*50)
                     play()
                 else:
-                    print("Thank You for using our game!\nGoodBye.")
+                    if cont != 'n':
+                        print("Invalid Input!\nGame is closing.")
+                    else:
+                        print("Thank You for using our game!\nGoodBye.")
                     exit()
 
 play()
