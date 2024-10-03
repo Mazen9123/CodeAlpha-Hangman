@@ -26,6 +26,7 @@ def play():
         elif guess in word:
             return True
         else:
+            print(f"You entered {guess} which is not in the word, You lost a life.")
             return False
     # Code
     print(logo)
@@ -39,7 +40,6 @@ def play():
             correct_letters.append(guess)
             word_display()
         elif guess_state == False:
-            print("Wrong!")
             print(stages[lives - 1])
             lives -= 1
             if lives > 0:
